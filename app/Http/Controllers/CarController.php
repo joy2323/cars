@@ -16,8 +16,8 @@ class CarController extends Controller
 
     public function storeCar(Request $request)
     {
-        $id=Auth::user()->id;
-        $car= new Car([
+        $id = Auth::user()->id;
+        $car = new Car([
             'name'=>$request->name,
             'description'=>$request->description,
             'user_id'=>$id
@@ -28,7 +28,7 @@ class CarController extends Controller
 
     public function viewCar()
     {
-        $cars= Car::all();
+        $cars = Car::all();
         return view('pages.view', compact('cars'));
     }
 
@@ -46,7 +46,7 @@ class CarController extends Controller
 
     public function updateCar(Request $request, $id)
     {
-        $post= Car::whereId($id)->first();
+        $post = Car::whereId($id)->first();
         $post->name=$request->name;
         $post->description=$request->description;
 
@@ -57,7 +57,7 @@ class CarController extends Controller
 
     public function deleteCar($id)
     {
-        $car=Car::find($id);
+        $car = Car::find($id);
             // dd($id);
         $car->delete();
         return redirect('/pages/view');

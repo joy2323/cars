@@ -16,7 +16,7 @@
         			<tr>
             			<th width = "30px"><b>No.</b></th>
 						<th width = "50px"> Name</th>  
-						<th width = "50px">Date Created</th>
+						<th width = "50px">Date Posted</th>
         			</tr>
     			</thead>
     			<tbody>
